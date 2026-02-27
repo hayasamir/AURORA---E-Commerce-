@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معنا - AURORA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/black-jacket.png">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg p-0">
+
+      <a class="navbar-brand logo" href="#">AURORA</a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="mainNav">
+
+        <div class="navbar-nav mx-auto nav">
+          <a class="nav-link" href="index.html">الرئيسية</a>
+          <a class="nav-link" href="shop.html">المتجر</a>
+          <a class="nav-link" href="contact.html">تواصل معنا</a>
+        </div>
+
+        <div class="nav-actions d-flex align-items-center">
+          <a href="wishlist.html" class="wishlist-btn position-relative me-3">
+            ❤️
+            <span class="wishlist-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+
+          <a href="cart.html" class="cart-btn position-relative">
+            🛒
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">تواصل معنا</h2>
+    <p>هل لديك استفسار؟ لا تتردد في مراسلتنا!</p>
+
+    <form id="contactForm" class="contact-form">
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <textarea placeholder="اكتب رسالتك هنا..." required></textarea>
+      <button type="submit" class="btn primary">إرسال الرسالة</button>
+    </form>
+
+    <div id="contactMessage" style="margin-top:20px;color:green;"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h3>AURORA</h3>
+      <p>تجربة أزياء فاخرة لعشاق الأناقة العصرية.</p>
+    </div>
+
+    <div>
+      <h4>روابط مهمة</h4>
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#">الشروط والأحكام</a>
+      <a href="#">الدعم الفني</a>
+    </div>
+
+    <div>
+      <h4>النشرة البريدية</h4>
+      <input type="email" id="newsletterEmail" placeholder="بريدك الإلكتروني">
+      <button class="btn small" id="subscribeBtn">اشتراك</button>
+      <div id="newsletterMsg" style="margin-top:5px;color:#f00;font-size:0.9em;"></div>
+    </div>
+
+  </div>
+
+  <div class="copyright">&copy; 2026 AURORA</div>
+</footer>
+
+<script>
+  const subscribeBtn = document.getElementById('subscribeBtn');
+  const newsletterEmail = document.getElementById('newsletterEmail');
+  const newsletterMsg = document.getElementById('newsletterMsg');
+  const contactForm = document.getElementById('contactForm');
+  const contactMessage = document.getElementById('contactMessage');
+
+  function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  subscribeBtn.addEventListener('click', () => {
+    const email = newsletterEmail.value.trim();
+
+    if(!email) {
+      newsletterMsg.style.color = "#f00";
+      newsletterMsg.innerText = "يرجى إدخال بريدك الإلكتروني.";
+      return;
+    }
+
+    if(!isValidEmail(email)) {
+      newsletterMsg.style.color = "#f00";
+      newsletterMsg.innerText = "يرجى إدخال بريد إلكتروني صحيح.";
+      return;
+    }
+
+    newsletterMsg.style.color = "#0a0";
+    newsletterMsg.innerText = `شكراً لاشتراكك: ${email}`;
+    newsletterEmail.value = '';
+  });
+
+  contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    contactMessage.innerText = "تم إرسال رسالتك بنجاح! سنقوم بالرد عليك قريباً.";
+    contactForm.reset();
+  });
+</script>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

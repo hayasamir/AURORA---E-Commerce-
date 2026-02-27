@@ -1,0 +1,12 @@
+body.rtl{
+direction:rtl;
+text-align:right;
+}
+
+body.rtl .nav-container{
+flex-direction:row-reverse;
+}
+
+body.rtl .product-bottom{
+flex-direction:row-reverse;
+}

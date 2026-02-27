@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details | Aurora</title>
+<meta name="description" content="Buy Classic White T-Shirt with premium cotton quality. Modern slim fit design.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Classic White T-Shirt",
+  "image": "https://example.com/images/product1.jpg",
+  "description": "Premium cotton slim fit t-shirt for modern style.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Aurora"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://example.com/product.html",
+    "priceCurrency": "USD",
+    "price": "25",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<link rel="canonical" href="https://example.com/product.html">
+      <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/black-jacket.png">
+</head>
+<style>
+  body {
+  direction: rtl;
+  text-align: right;
+}
+    /* ================= ROOT COLORS ================= */
+
+:root {
+  --primary: #FFD700;
+  --accent: #FFB800;
+  --bg-dark: #0F0F0F;
+  --bg-card: #1A1A1A;
+  --text-light: #F5F5F5;
+  --text-muted: #AAAAAA;
+  --shadow: rgba(0,0,0,0.5);
+}
+
+/* ================= GLOBAL ================= */
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= PRODUCT DETAILS ================= */
+
+.product-details {
+  display: flex;
+  gap: 60px;
+  margin: 80px auto;
+  flex-wrap: wrap;
+}
+
+/* ===== Gallery ===== */
+
+.gallery {
+  flex: 1;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 12px;
+  background: var(--bg-card);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.thumbnails {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.thumbnails img {
+  width: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.thumbnails img:hover {
+  opacity: 1;
+  border: 2px solid var(--primary);
+}
+
+/* ===== Product Info ===== */
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 24px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.desc {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* ===== Options ===== */
+
+.option {
+  margin-bottom: 25px;
+}
+
+.sizes button {
+  background: var(--bg-card);
+  color: var(--text-light);
+  border: 1px solid var(--text-muted);
+  padding: 8px 14px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sizes button:hover,
+.sizes button.active {
+  background: var(--primary);
+  color: black;
+  border: none;
+}
+
+.colors {
+  display: flex;
+  gap: 10px;
+}
+
+.color {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.color.black { background: black; }
+.color.white { background: white; }
+.color.red { background: red; }
+
+.color.active {
+  border: 2px solid var(--primary);
+}
+
+/* ===== Quantity ===== */
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.quantity button {
+  background: var(--bg-card);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.quantity span {
+  font-size: 18px;
+}
+
+/* ===== Buttons ===== */
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: black;
+}
+
+.btn.primary:hover {
+  background: var(--accent);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn.secondary:hover {
+  background: var(--primary);
+  color: black;
+}
+
+/* ================= TABS ================= */
+
+.product-tabs {
+  margin: 80px auto;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tab-buttons button {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.tab-buttons button.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+.tab-content {
+  display: none;
+  background: var(--bg-card);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ================= RELATED ================= */
+
+.related h2 {
+  margin-bottom: 30px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.related .product-card {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.related .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow);
+}
+
+.related img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 768px){
+  .product-details {
+    flex-direction: column;
+  }
+}
+</style>
+<body>
+
+<!-- NAVBAR -->
+<header class="header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg p-0">
+
+      <a class="navbar-brand logo" href="#">AURORA</a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="mainNav">
+
+        <div class="navbar-nav mx-auto nav">
+          <a class="nav-link" href="index.html">الرئيسية</a>
+          <a class="nav-link" href="shop.html">المتجر</a>
+          <a class="nav-link" href="contact.html">تواصل معنا</a>
+        </div>
+
+        <div class="nav-actions d-flex align-items-center">
+          <a href="wishlist.html" class="wishlist-btn position-relative me-3">
+            ❤️
+            <span class="wishlist-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+
+          <a href="cart.html" class="cart-btn position-relative">
+            🛒
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="product-details container">
+
+    <div class="gallery">
+        <img id="mainImage" src="assets/images/product1.jpg" class="main-img">
+    </div>
+
+    <div class="product-info">
+        <h1 id="productName">تيشيرت أبيض كلاسيكي</h1>
+        <p class="price">29$</p>
+
+        <p class="desc">
+            تيشيرت مصنوع من قطن عالي الجودة بقصة عصرية مريحة تناسب الاستخدام اليومي.
+        </p>
+
+        <div class="option">
+            <h4>المقاس</h4>
+            <div class="sizes">
+                <button onclick="selectOption(this)">S</button>
+                <button onclick="selectOption(this)">M</button>
+                <button onclick="selectOption(this)">L</button>
+                <button onclick="selectOption(this)">XL</button>
+            </div>
+        </div>
+
+        <div class="option">
+            <h4>اللون</h4>
+            <div class="colors">
+                <span class="color black" onclick="selectColor(this)"></span>
+                <span class="color white" onclick="selectColor(this)"></span>
+                <span class="color red" onclick="selectColor(this)"></span>
+            </div>
+        </div>
+
+        <div class="quantity">
+            <button onclick="changeQty(-1)">-</button>
+            <span id="qty">1</span>
+            <button onclick="changeQty(1)">+</button>
+        </div>
+
+        <div class="actions">
+            <button class="btn primary" onclick="addProductToCart()">أضف إلى السلة</button>
+            <button class="btn secondary" onclick="addProductToWishlist()">أضف إلى المفضلة</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="product-tabs container">
+    <div class="tab-buttons">
+        <button onclick="openTab('desc')" class="active">الوصف</button>
+        <button onclick="openTab('reviews')">التقييمات</button>
+    </div>
+
+    <div id="desc" class="tab-content active">
+        <p>
+            خامة عالية الجودة، قابل للغسل في الغسالة، مصمم لراحة وأناقة يومية.
+        </p>
+    </div>
+
+    <div id="reviews" class="tab-content">
+        <p>⭐⭐⭐⭐☆ (4.5)</p>
+        <p>جودة ممتازة ومقاس مثالي!</p>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h3>AURORA</h3>
+      <p>تجربة أزياء فاخرة لعشاق الأناقة العصرية.</p>
+    </div>
+
+    <div>
+      <h4>روابط مهمة</h4>
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#">الشروط والأحكام</a>
+      <a href="#">الدعم الفني</a>
+    </div>
+
+    <div>
+      <h4>النشرة البريدية</h4>
+      <input type="email" id="newsletterEmail" placeholder="بريدك الإلكتروني">
+      <button class="btn small" id="subscribeBtn">اشتراك</button>
+      <div id="newsletterMsg" style="margin-top:5px;color:#f00;font-size:0.9em;"></div>
+    </div>
+
+  </div>
+
+  <div class="copyright">&copy; 2026 AURORA</div>
+</footer>
+
+<script>
+  const subscribeBtn = document.getElementById('subscribeBtn');
+  const newsletterEmail = document.getElementById('newsletterEmail');
+  const newsletterMsg = document.getElementById('newsletterMsg');
+
+  function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  subscribeBtn.addEventListener('click', () => {
+    const email = newsletterEmail.value.trim();
+
+    if(!email) {
+      newsletterMsg.style.color = "#f00";
+      newsletterMsg.innerText = "يرجى إدخال بريدك الإلكتروني.";
+      return;
+    }
+
+    if(!isValidEmail(email)) {
+      newsletterMsg.style.color = "#f00";
+      newsletterMsg.innerText = "يرجى إدخال بريد إلكتروني صحيح.";
+      return;
+    }
+
+    newsletterMsg.style.color = "#0a0";
+    newsletterMsg.innerText = `شكراً لاشتراكك: ${email}`;
+    newsletterEmail.value = '';
+  });
+</script>
+
+<button id="backToTop">↑</button>
+<div id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

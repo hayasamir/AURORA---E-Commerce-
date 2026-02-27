@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<title>Aurora - قالب متجر أزياء إلكتروني عصري</title>
+
+<meta name="description" content="Aurora قالب متجر إلكتروني عصري ومتجاوب باللغة العربية. مناسب لمتاجر الملابس والعلامات التجارية مع تصميم احترافي وسهل التخصيص.">
+<meta name="keywords" content="متجر إلكتروني, قالب HTML, متجر أزياء, تصميم متجر, قالب عربي, Bootstrap 5">
+<meta name="author" content="Aurora Template">
+<meta name="robots" content="index, follow">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="images/black-jacket.png">
+
+<style>
+body{
+  font-family:'Cairo',sans-serif;
+}
+</style>
+
+</head>
+<body>
+
+<div id="preloader"><div class="loader"></div></div>
+
+<header class="header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg p-0">
+
+      <a class="navbar-brand logo" href="#">AURORA</a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="mainNav">
+
+        <div class="navbar-nav mx-auto nav">
+          <a class="nav-link" href="index.html">الرئيسية</a>
+          <a class="nav-link" href="shop.html">المتجر</a>
+          <a class="nav-link" href="contact.html">تواصل معنا</a>
+        </div>
+
+        <div class="nav-actions d-flex align-items-center">
+          <a href="wishlist.html" class="wishlist-btn position-relative me-3">
+            ❤️
+            <span class="wishlist-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+
+          <a href="cart.html" class="cart-btn position-relative">
+            🛒
+            <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="container hero-grid ">
+    <div class="hero-content">
+      <h1>الأناقة العصرية <br> بأسلوب فاخر</h1>
+      <p>قطع أزياء فاخرة مصممة بعناية لتمنحك إطلالة أنيقة وجودة عالية تناسب جميع المناسبات.</p>
+      <div class="hero-buttons">
+        <a href="shop.html" class="btn primary">تسوق الآن</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <strong class="counter" data-target="12000" data-type="k">0</strong>
+          <span>عميل</span>
+        </div>
+
+        <div>
+          <strong class="counter" data-target="340" data-type="plus">0</strong>
+          <span>منتج</span>
+        </div>
+
+        <div>
+          <strong class="counter" data-target="98" data-type="percent">0</strong>
+          <span>% رضا العملاء</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rotate-container">
+      <img class="animate__animated animate__bounce" src="images/black-jacket.png" alt="سترة">
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">التصنيفات</h2>
+    <div class="categories-grid">
+
+      <div class="category-card">
+        <div class="category-img">
+          <img src="images/4dcca237b5587458e910a3ac815ab12c-removebg-preview.png" alt="">
+        </div>
+        <h4>تيشيرتات</h4>
+      </div>
+
+      <div class="category-card">
+        <div class="category-img">
+          <img src="images/db4168ba6f7fcf193d40d04476c23dc3-removebg-preview.png" alt="">
+        </div>
+        <h4>جينز</h4>
+      </div>
+
+      <div class="category-card">
+        <div class="category-img">
+          <img src="images/7b7d979e0a1182a5d1235d124a973789-removebg-preview.png" alt="">
+        </div>
+        <h4>هوديز وسويت شيرت</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="promo">
+  <div class="container promo-content">
+    <h2>خصم خاص 30%</h2>
+    <a href="shop.html" class="btn primary">تسوق الآن</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">أحدث المنتجات</h2>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="badge new">جديد</div>
+        <a href="product.html?id=1">
+          <div class="product-image" style="background-image:url('images/ccb9547b21d8dba7ef2587d76490d3f9.jpg')"></div>
+        </a>
+        <h4><a href="product.html?id=1">تيشيرت أبيض كلاسيكي</a></h4>
+        <p>قطن مريح للاستخدام اليومي</p>
+        <div class="product-bottom">
+          <span class="price">$29</span>
+          <button class="btn small" onclick="addToCart('تيشيرت أبيض كلاسيكي',29)">أضف إلى السلة</button>
+          <button class="btn small wishlist-btn" onclick="addToWishlist('تيشيرت أبيض كلاسيكي',29)">❤️</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="badge sale">خصم</div>
+        <a href="product.html?id=2">
+          <div class="product-image" style="background-image:url('images/5c823b9c5f6381eb4ca8bb8db2ad704f.jpg')"></div>
+        </a>
+        <h4><a href="product.html?id=2">جينز أزرق عصري</a></h4>
+        <p>تصميم عصري بخامة دينم فاخرة</p>
+        <div class="product-bottom">
+          <span class="price">$49</span>
+          <button class="btn small" onclick="addToCart('جينز أزرق عصري',49)">أضف إلى السلة</button>
+          <button class="btn small wishlist-btn" onclick="addToWishlist('جينز أزرق عصري',49)">❤️</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product.html?id=3">
+          <div class="product-image" style="background-image:url('images/7ab50d17b4173cbe17c8c89c970b0cd6.jpg')"></div>
+        </a>
+        <h4><a href="product.html?id=3">هودي رمادي</a></h4>
+        <p>قماش ناعم بإطلالة كاجوال</p>
+        <div class="product-bottom">
+          <span class="price">$39</span>
+          <button class="btn small" onclick="addToCart('هودي رمادي',39)">أضف إلى السلة</button>
+          <button class="btn small wishlist-btn" onclick="addToWishlist('هودي رمادي',39)">❤️</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="testimonial-box">
+      <p>"Aurora غيّر هوية علامتنا التجارية بالكامل."</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h3>AURORA</h3>
+      <p>تجربة أزياء فاخرة لعشاق الأناقة العصرية.</p>
+    </div>
+
+    <div>
+      <h4>روابط مهمة</h4>
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#">الشروط والأحكام</a>
+      <a href="#">الدعم</a>
+    </div>
+
+    <div>
+      <h4>النشرة البريدية</h4>
+      <input type="email" id="newsletterEmail" placeholder="أدخل بريدك الإلكتروني">
+      <button class="btn small" id="subscribeBtn">اشتراك</button>
+      <div id="newsletterMsg" style="margin-top:5px;color:#f00;font-size:0.9em;"></div>
+    </div>
+
+  </div>
+
+  <div class="copyright">&copy; 2026 AURORA</div>
+</footer>
+
+<script>
+const subscribeBtn = document.getElementById('subscribeBtn');
+const newsletterEmail = document.getElementById('newsletterEmail');
+const newsletterMsg = document.getElementById('newsletterMsg');
+
+function isValidEmail(email){
+const regex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+return regex.test(email);
+}
+
+subscribeBtn.addEventListener('click',()=>{
+const email=newsletterEmail.value.trim();
+
+if(!email){
+newsletterMsg.style.color="#f00";
+newsletterMsg.innerText="يرجى إدخال البريد الإلكتروني.";
+return;
+}
+
+if(!isValidEmail(email)){
+newsletterMsg.style.color="#f00";
+newsletterMsg.innerText="يرجى إدخال بريد إلكتروني صحيح.";
+return;
+}
+
+newsletterMsg.style.color="#0a0";
+newsletterMsg.innerText=`شكراً لاشتراكك: ${email}`;
+newsletterEmail.value='';
+});
+</script>
+
+<button id="backToTop">↑</button>
+<div id="toast"></div>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
