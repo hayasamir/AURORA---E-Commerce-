@@ -11,28 +11,28 @@
 
 /* ================= GLOBAL ================= */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    line-height: 1.6;
-    scroll-behavior: smooth;
+  font-family: 'Cairo', sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.7;
+  direction: rtl;
+  
 }
 
 a {
     text-decoration: none;
     color: inherit;
 }
-
 .container {
-    width: 90%;
-    max-width: 1300px;
-    margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* ================= HEADER ================= */
@@ -135,12 +135,23 @@ a {
 
 /* ================= HERO ================= */
 .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 100px 0;
-    gap: 50px;
-    padding-left: 280px;
+  padding: 120px 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hero-text {
+  flex: 1;
+}
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 30px;
+  color: #ccc;
 }
 
 .hero-content h1 {
@@ -206,7 +217,7 @@ a {
 }
 .rotate-container {
     position: relative;
-    right: 100%;
+    right: 30%;
     bottom: 450px;
    width: 200px;
     height: 200px;
